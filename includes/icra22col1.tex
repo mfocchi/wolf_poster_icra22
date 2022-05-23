@@ -1,0 +1,91 @@
+\begin{myblock}{{\large Introduction}}
+	
+
+\textbf{Motivation:}\\
+ the Search and Rescue Robots Market is projected to grow with a Compound Annual Growth Rate (CAGR) of more than 20\%\footnote{\url{https://www.mordorintelligence.com/industry-reports/search-and-rescue-robots-market}}.
+ Allied Market Research, reported that the global inspection,  and surveillance robots market generated \$940 million in 2020 and is expected to reach close to \$14 billion by 2030\footnote{\url{https://www.cnbc.com/2021/12/26/robotic-dogs-taking-on-jobs-in-security-inspection-and-public-safety-.html}}.	\\
+	
+	
+\textbf{Problem:}\\
+\begin{itemize}
+	\setlength{\itemindent}{-10pt}
+	\item lack of textit{generic} and \textit{robot agnostic} control software solutions to control quadruped robots
+	\item  absence of a common and standardized software framework, high level of expertise required to control such platforms,
+	\item   increased Complexity  when the quadruped robots are equipped with one (or more) manipulator(s)
+\end{itemize}
+\vspace{20pt}
+	
+\textbf{Solution:} Wolf
+\begin{figure}[thb!]
+	\centering
+	\includegraphics[width=0.5\columnwidth, trim={7cm 5.5cm 7cm 5.5cm}, clip=true]{images/wolf-logo.pdf}
+	\label{fig:wolf_logo}
+\end{figure}
+
+\vspace{20pt}
+\textbf{In more details:}\\
+\begin{itemize}
+	\setlength{\itemindent}{-10pt}
+	\item   end-to-end software suite devoted to the loco-manipulation of quadruped robots. 
+	\item abstracts the complexity of planning and control of quadrupedal robot hardware 
+	\item allows multiple tele-operation devices
+	\end{itemize}
+\end{myblock} 
+
+
+
+
+
+
+
+\begin{myblock}{\large WoLF objectives} 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{images/block_diagram_updated.pdf}
+	\caption{WoLF block diagram overview. The diagram is composed of four logical layers: the user and navigation input layer, the walking pattern generator, the whole-body inverse dynamics, and the reactive layer. Each layer is composed of one or more components. A description of the layers and their components is detailed in Section~\ref{sec:components}.\textcolor{red}{simplify this or put full page} }
+	\label{fig:diagram}
+\end{figure}
+
+
+\textbf{Features:}
+\begin{itemize}
+	\item plug-and-play software framework, easy to tune 
+	\item  adaptable to any quadruped robot without the need for specific knowledge about locomotion or control.	
+	\item promote strandardization: use of established robotics tools and technologies such as ROS~\cite{quigley2009ros}, Gazebo~\cite{agueroVRC2015}, OpenSoT~\cite{hoffmanOpenSoT2017} 	
+	\item  Differently from CHAMP, WoLF features support for on-board manipulators.
+	\item extend the capabilities of quadrupedal platforms with manipulation and navigation skills.
+\end{itemize}
+
+\textbf{How is it done?}\\
+\vspace{20pt}
+The WoLF project started from the work in~\cite{raiola2020} about a novel locomotion framework for quadrupedal robots. 
+We designed it to work as a plugin for ros\_control \cite{chitta2017ros_control}. The ros\_control package permits to easily abstract the particular hardware for both the quadruped and/or the manipulator and therefore to re-use the same controller with different robots provided that they expose an effort interface.
+
+
+\end{myblock}
+
+
+
+
+\begin{myblock}{\large Wolf components}
+	
+	%\begin{columns}
+	%\begin{column}{0.63\textwidth}
+	
+	\textbf{How is it done?}\\
+	\begin{itemize}
+		\item User inputs and navigation
+		\item Walking pattern generator and reactive layer
+		\item State and Terrain Estimation
+		\item Whole-Body Inverse Dynamics
+	\end{itemize}
+	%\end{column}
+	%\begin{column}{0.3\textwidth}
+	%\begin{figure}[tb]
+	%	\centering
+	%	\includegraphics[width=0.9\columnwidth]{figures/model.pdf}
+	%\end{figure}
+	%\end{column}	
+	%\end{columns}	
+\end{myblock}

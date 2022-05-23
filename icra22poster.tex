@@ -1,0 +1,47 @@
+\documentclass[usenames,dvipsnames]{beamer}
+\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+\mode<presentation>{\usetheme{ICRA18}}
+
+\input{includes/used_packages.tex}
+\input{includes/acronyms.tex}
+\input{includes/math_commands.tex}
+
+\newcolumntype{Z}{>{\centering\arraybackslash}X} % centered tabularx columns
+\sisetup{per=frac,fraction=sfrac}
+
+\newcommand{\bmcolor}[1]{\textcolor{RoyalBlue}{\bm{#1}}}
+
+\title{WoLF: the Whole-body Locomotion Framework for Quadruped Robots}
+
+
+
+\author{\normalsize Gennaro Raiola, Michele Focchi,Enrico Mingo Hoffman}
+\institute[]{\textcolor{black}{
+		Universit\`a di Trento, Via Sommarive, 9, 38123 Trento, Italy\\		
+		Dynamic Legged Systems lab, Istituto Italiano di Tecnologia (iit), Italy.\\
+		PAL Robotics, Carrer de Pujades 77, 08005 Barcelona, Spain}}
+
+
+\linespread{1.05}
+\begin{document}
+\begin{frame}       \vspace{30pt}
+\begin{columns}
+
+\begin{column}{.494\textwidth}
+\input{includes/icra22col1.tex}
+\end{column}
+
+\begin{column}{.494\textwidth}
+\input{includes/icra22col2.tex}
+\vspace{-20pt}
+\begin{myblock}{\large References}
+	\linespread{0.9}
+	\input{includes/block_refs.tex}
+\end{myblock}%\vfill
+
+\end{column}
+
+
+\end{columns}
+\end{frame}
+\end{document}
